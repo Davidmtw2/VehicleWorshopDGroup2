@@ -29,7 +29,7 @@ public class UI {
     public static void homeScreen(){
         sorting = DealershipFileManager.getDealership();
         while (true){
-            System.out.println("home screen prompt");
+            System.out.println("Select your input");
 
             switch (userInput().toLowerCase()){
                 case"1"-> processGetByPriceRequest();
@@ -77,11 +77,16 @@ public class UI {
         catch (NumberFormatException ex){
             System.out.println("not a numerical input prompt");
         }
+            for(Vehicle x :sorting.getVehiclesByPrice(minPrice,maxPrice)){
+                System.out.println(x);
+            }
 
+final2
         //System.out.println(sorting.getVehiclesByPrice(minPrice,maxPrice).toString());
         for (Vehicle x: sorting.getVehiclesByPrice(minPrice,maxPrice)) {
             System.out.println(x);
         }
+ main
     }
     private static void processGetByMakeModelRequest(){
         Scanner scanner = new Scanner(System.in);
@@ -231,6 +236,7 @@ public class UI {
             catch (NumberFormatException ex) {
                 System.out.println("need numerical input");
             }
+            DealershipFileManager.saveVehicles(sorting);
             homeScreen();
         }
     }
@@ -248,6 +254,7 @@ public class UI {
                 removed = true;
             }
         }
+        DealershipFileManager.saveVehicles(sorting);
     }
 
 

@@ -3,8 +3,9 @@ package org.example;
 public class Vehicle {
     private int vin;
     private int year;
-    private String model;
     private String make;
+final2
+main
     private String vehicleType;
     private String color;
     private int odometer;
