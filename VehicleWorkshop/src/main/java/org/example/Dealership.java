@@ -15,13 +15,6 @@ public class Dealership {
     //Vehicle b = new Vehicle(37846,2001,"Ford","Ranger","truck","Yellow",172544,1995.00);
     //Vehicle c = new Vehicle (44901,2012,"Honda","Civic","SUV","Gray",103221,6995.00);
 
-
-
-
-
-
-
-
     public Dealership(String name, String address, String phone) {
         this.name = name;
         this.address = address;
@@ -132,7 +125,6 @@ public class Dealership {
             return new ArrayList<>(inventory);
         }
     }
-
     public List<Vehicle> getAllVehicles(){
         return inventory;
     }
